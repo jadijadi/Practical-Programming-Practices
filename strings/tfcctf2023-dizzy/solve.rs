@@ -2,8 +2,6 @@ fn get_flag<'a>(input: &'a str) -> String {
     let words = input.split(" ");
 
     // Parse the numbers
-    //
-    // and get the first item of the word as char
     let parsed_nums = words
         .into_iter()
         .map(|word| (word.chars().nth(0).unwrap(), word[1..].parse().unwrap()))
@@ -18,8 +16,8 @@ fn get_flag<'a>(input: &'a str) -> String {
     // set the every item to zero
     answer.resize(required_len, '\0');
 
-    for pn in parsed_nums {
-        answer[pn.1] = pn.0;
+    for (char, index) in parsed_nums {
+        answer[index] = char;
     }
 
     // Collect the Vec of chars as String
