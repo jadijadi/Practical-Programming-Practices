@@ -28,7 +28,7 @@ print(nextHappy(10))
 
 
 
-# geeksforgeeks.org solution
+# Refrence solution
 '''
 def nextHappy(N):
     def isHappy(n):
