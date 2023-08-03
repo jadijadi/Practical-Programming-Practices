@@ -21,3 +21,29 @@ def nextHappy(N):
     return finder(next_happy_number)
     
 print(nextHappy(10))
+
+
+
+
+
+
+
+# geeksforgeeks.org solution
+'''
+def nextHappy(N):
+    def isHappy(n):
+        print("check for", n)
+        seen = set()
+        while n not in seen:
+            seen.add(n)
+            n = sum(int(digit)**2 for digit in str(n))
+            print(n)
+            if n == 1:
+                return True
+        return False
+
+    while True:
+        if isHappy(N+1):
+            return N+1
+        N += 1
+'''
