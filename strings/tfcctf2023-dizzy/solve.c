@@ -27,10 +27,8 @@ void parse_cipher(char* cipher, cipher_item_t* cipher_arr)
 {
     CHECK_BUFFERS(cipher, cipher_arr);
 
-    size_t i = 0;
     char* token = strtok(cipher, DELIMITER);
-
-    for (i = 0; token != NULL && i < MAX_CIPHER_SIZE; i++) {
+    for (size_t i = 0; token != NULL && i < MAX_CIPHER_SIZE; i++) {
         cipher_arr[i] = (cipher_item_t) {
             .letter = token[0],
             .index = atoi(token + 1)
