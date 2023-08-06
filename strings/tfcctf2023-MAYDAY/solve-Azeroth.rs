@@ -65,7 +65,7 @@ fn decode_message(input: &str) -> String {
         .into_iter()
         // Map over words and turn them into Special Enum
         .map(|w| Special::from(w))
-        // Map over special and turn then into string
+        // Map over specials and turn them into string
         .map(|special| special.to_string())
         // Collect the result as string[]
         .collect::<Vec<String>>()
