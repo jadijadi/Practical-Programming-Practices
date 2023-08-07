@@ -7,9 +7,6 @@ enum Special {
 
     /// any char like dash(-)
     Char(char),
-
-    /// Unknown word
-    Unknown,
 }
 
 // Special to String
@@ -18,9 +15,6 @@ impl Display for Special {
         match self {
             Self::Number(n) => write!(f, "{}", n),
             Self::Char(c) => write!(f, "{}", c),
-
-            // pass Unknown
-            Self::Unknown => write!(f, ""),
         }
     }
 }
@@ -48,7 +42,7 @@ impl From<&str> for Special {
             "Nine" => Number(9),
             "Dash" => Char('-'),
 
-            _ => Unknown,
+            s => Char(s.chars().nth(0).unwrap()),
         }
     }
 }
