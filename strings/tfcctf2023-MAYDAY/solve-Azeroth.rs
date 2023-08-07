@@ -42,7 +42,7 @@ impl From<&str> for Special {
             "Nine" => Number(9),
             "Dash" => Char('-'),
 
-            s => Char(s.chars().nth(0).unwrap()),
+            s => Char(s.chars().nth(0).unwrap_or('\0')),
         }
     }
 }
