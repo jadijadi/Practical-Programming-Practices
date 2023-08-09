@@ -3,13 +3,13 @@ string_list = text.split(' ')
 
 
 
-Ans = []
+ans = []
 for i in range(40):
-    Ans.append('*')
+    ans.append('*')
 
 for s in range(40):
-    Ans[int(string_list[s][1:])] = string_list[s][0]
+    ans[int(string_list[s][1:])] = string_list[s][0]
 
-print('The decrypted message is: ',''.join(Ans))
+print('The decrypted message is: ',''.join(ans))
 
 
