@@ -14,7 +14,7 @@
 
 ;; ===================================================
 ;; HOW TO RUN?
-;; sbcl --noinform --load dizzy-thehxdev.lisp --eval '(dizzy:solve)' --quit
+;; sbcl --noinform --load solve-thehxdev.lisp --eval '(dizzy:solve)' --quit
 ;; ===================================================
 
 
