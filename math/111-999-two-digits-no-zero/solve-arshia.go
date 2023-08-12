@@ -14,7 +14,6 @@ func main() {
 	fmt.Println(count)
 }
 
-
 func hasConditions(num int) bool {
 	digitSet := make(map[int]bool)// in golang there is no Set data structure so we use a hash-map
 	for i:=0; i<3; i++{
