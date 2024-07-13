@@ -2,9 +2,7 @@ string = "T4 l16 _36 510 _27 s26 _11 320 414 {6 }39 C2 T0 m28 317 y35 d31 F1 m22
 
 words = string.split(' ')
 
-answer = []
-for i in range(100):
-    answer.append('*')
+answer = [None] * len(words) 
 
 def print_from_array(answer):
     print (''.join(answer))
